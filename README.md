@@ -16,3 +16,15 @@ The photos show the request order numbers that matches the requests in **Request
 5 - one of POST request (message _msg3_)
 6 - GET request when we have three messages in logging service storage
 ```
+In the third photo we are lucky with the order of messages, because usually the order is not saved and it is necessary to add some functionality to organize messages.
+
+### Microservice console
+##### facade service
+![image](https://user-images.githubusercontent.com/60771374/170475488-1fad584c-5052-4f67-a814-e2e7a81b7b26.png)
+
+##### logging service
+![image](https://user-images.githubusercontent.com/60771374/170475591-d9a23eb6-b980-48f8-bcb2-2c32d2d9472b.png)
+Here, in addition to basic information, the content of the received message is displayed.
+
+##### message service
+![image](https://user-images.githubusercontent.com/60771374/170475551-c3fe960b-e15b-4a7c-aa8a-27b523f6b2a9.png)
