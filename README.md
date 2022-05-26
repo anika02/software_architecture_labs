@@ -24,3 +24,16 @@ OptimisticMember (optimistic locking)
 ![image](https://user-images.githubusercontent.com/60771374/170491192-28047ee5-0812-45ec-b02a-2625bcf06427.png) ![image](https://user-images.githubusercontent.com/60771374/170491252-242d818d-a268-435c-a548-069c609a8f87.png) ![image](https://user-images.githubusercontent.com/60771374/170491303-dfb3f5cc-ddb4-47f8-aa2a-717ef5956e9e.png) ![image](https://user-images.githubusercontent.com/60771374/170491330-60c3cc80-ab23-48fb-a14f-517c7d9ee3da.png)
 
 ### Task 5
+
+##### Adding elements tp queue
+![image](https://user-images.githubusercontent.com/60771374/170500827-a3213592-d484-42b8-989a-073dd41deb5a.png)
+![image](https://user-images.githubusercontent.com/60771374/170501443-9d7b91d5-26c4-4e27-8940-1d7728bdec4c.png)
+
+
+##### Taking elements
+![image](https://user-images.githubusercontent.com/60771374/170500920-4aabf7fb-b8fa-43e2-831e-250f2bd5f259.png)
+![image](https://user-images.githubusercontent.com/60771374/170501327-44b14228-dfbe-4392-9a60-8100e7863175.png)
+![image](https://user-images.githubusercontent.com/60771374/170501183-a63f3307-2fd7-4690-ae44-aec079240086.png)
+
+Adding elements to the filled queue that has not listeners: an error will occur and the queue will have the first elements.
+Listeners will read while queue has data. If the data runs out (no producer or the producer writes slower than the data is read), listeners will be blocked.
