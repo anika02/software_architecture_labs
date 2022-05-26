@@ -4,9 +4,9 @@
 ![image](https://user-images.githubusercontent.com/60771374/170538654-9d4c1514-0bb9-436f-885c-3705d4731e2c.png)
 
 ### 10 POST requests
-Requests are in file **POST_requests.http**
+Requests are in the file **POST_requests.http**
 
-##### all post requests
+##### all POST requests
 ![image](https://user-images.githubusercontent.com/60771374/170539017-70c05506-9978-4beb-88ea-bd9096520f9f.png)
 
 ##### logging service copy 1
