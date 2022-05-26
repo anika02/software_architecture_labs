@@ -39,7 +39,7 @@ Request are in the file **GET_requests.http**
 ![image](https://user-images.githubusercontent.com/60771374/170539970-f2f1fc39-ca50-4486-81f8-b7bfdca9ddb6.png)
 
 ### Close one of three logging service copies
-Since we have directly specified in the code a random choice between the three service copies, GET and POST requests will randomly choose one of the copies, and each time we access the disabled service, an error will be returned.
+Since we have directly specified in the code a random choice between the three service copies, GET and POST requests will randomly choose one of the copies, and each time we access the disabled service, an error will be returned.\
 Also, due to the fact that the nodes are tied to a certain copy of the service, the node that is tied to the disabled service will stop to function. Writing and reading to the map will take place only from the included nodes (in other words, further filling of the distributed map with data will take place only on these two nodes). And all data with work services will be returned.
 Important: my code is on python and hazelcast node does not turn off when one of copies is turned off.
 ##### GET request to working service
