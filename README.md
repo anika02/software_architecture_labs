@@ -10,9 +10,9 @@ The distribution of values by nodes in the distributed map is more or less unifo
 All elements are more or less evenly distributed between the two remaining nodes (522, 438).
 
 ### Task 4
-RacyUpdateMember is not safe, when is run by more than one cluster member simultaneously. And OptimisticMember or PessimisticUpdateMember can solve this problem. OptimisticMember has increased productivity compared to PessimisticUpdateMember. In turn, PessimisticUpdateMember is more reliable than OptimisticMember in terms of data consistency.\
+RacyUpdateMember is not safe, when is run by more than one cluster member simultaneously. And OptimisticMember or PessimisticUpdateMember can solve this problem. OptimisticMember has increased productivity compared to PessimisticUpdateMember. In turn, PessimisticUpdateMember is more reliable than OptimisticMember in terms of data consistency.
 
-Some photos from the running these methods: \
+Some photos from the running these methods: 
 
 RacyUpdateMember (without locking)
 ![image](https://user-images.githubusercontent.com/60771374/170490849-d0eebd01-36a9-4f32-8f7d-9d08e15b161a.png)
