@@ -7,7 +7,7 @@ The distribution of values by nodes in the distributed map is more or less unifo
 
 #### 2 nodes work (after 1 node deleting)
 ![image](https://user-images.githubusercontent.com/60771374/170478742-222de1c5-b085-443c-8cb2-76c1ec0f150a.png)
-The elements are more or less evenly distributed between the two remaining nodes.
+All elements are more or less evenly distributed between the two remaining nodes (522, 438).
 
 ### Task 4
 
