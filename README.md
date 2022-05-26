@@ -3,6 +3,8 @@
 ### Architecture
 ![image](https://user-images.githubusercontent.com/60771374/170538654-9d4c1514-0bb9-436f-885c-3705d4731e2c.png)
 
+Runned logging service copies on the different ports. Each service has a separate node in Hazelcast Distributed Map.
+
 ### 10 POST requests
 Requests are in the file **POST_requests.http**
 
@@ -32,3 +34,6 @@ hazelcast: 127.0.0.1:5703
 ```
 ![image](https://user-images.githubusercontent.com/60771374/170539702-c1b1d9e0-17e8-4c9f-9993-2c71d3260d6b.png)
 
+### GET request
+Request are in the file **GET_requests.http**
+![image](https://user-images.githubusercontent.com/60771374/170539970-f2f1fc39-ca50-4486-81f8-b7bfdca9ddb6.png)
