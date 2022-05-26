@@ -11,8 +11,8 @@ The photos show the request order numbers that matches the requests in **Request
 ![image](https://user-images.githubusercontent.com/60771374/170474701-0cfc0afa-5d5f-4329-8ba3-98ca025b26be.png)
 ![image](https://user-images.githubusercontent.com/60771374/170474730-c92102bd-5e48-4f53-98cd-09a252d0cbcd.png)
 
-'''
+```
 3 - first GET request when we have one message in logging service storage
 5 - one of POST request (message _msg3_)
 6 - GET request when we have three messages in logging service storage
-'''
+```
