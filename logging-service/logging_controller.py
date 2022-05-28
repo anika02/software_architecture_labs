@@ -1,12 +1,11 @@
-import logging
-
 from flask import Flask, request
 import hazelcast
+import logging
 
 app = Flask(__name__)
 host = "localhost"
 number_copy = 1  # 1, 2 or 3
-port = 9001 + number_copy
+port = 9010 + number_copy
 
 logging.basicConfig(level=logging.INFO)
 
