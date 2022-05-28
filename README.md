@@ -18,6 +18,7 @@ Requests are in the file **POST_requests.http**
 ![image](https://user-images.githubusercontent.com/60771374/170826862-7f812ee1-07ed-4ccf-a6c0-a8aa85d17946.png)
 
 ### Some GET requests
+Request are in the file **GET_requests.http**
 #### GET #1
 ![image](https://user-images.githubusercontent.com/60771374/170826906-cdd2146e-0e61-4fc2-bb2d-acb5f427ad4d.png)
 **messages service copy 1**
