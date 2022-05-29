@@ -3,11 +3,18 @@
 ### Architecture
 ![image](https://user-images.githubusercontent.com/60771374/170884165-6e4358fb-dce0-4aac-a64f-09ea714a1444.png)
 
-
+### Run
+```
+1. hazelcast --- hazelcast-5.1.1/bin/hz-start.bat
+2. consul --- consul agent -dev
+3. run_consul.py
+4. 1 instance of facade
+5. 3 inctances of logging service with different service_port
+6. 2 inctances of messaging service with different service_port
+```
 ### 10 POST requests
 Requests are in the file **POST_requests.http**
 ![image](https://user-images.githubusercontent.com/60771374/170884643-ca4ab4de-6256-4df7-bb5b-2875ba698ce3.png)
-
 
 ### Results for logging services
 ##### logging service copy 1
@@ -35,8 +42,6 @@ Request are in the file **GET_requests.http**
 #### GET #3
 ![image](https://user-images.githubusercontent.com/60771374/170884714-7d554ea3-c2fd-4752-842f-5ade244b3b8d.png)
 **messages service copy 1**
-![image](https://user-images.githubusercontent.com/60771374/170884720-7056ccaf-b59a-40d3-8d78-bd1ad86ed143.png)
+![image](https://user-images.githubusercontent.com/60771374/170884761-be4194b9-b63d-4f99-8f77-c3a16bc2d6c4.png)
 
-Conclusions of GET requests:
-1. Messages received from the logging service stored in the Hazelcast Distributed Map are randomly ordered. Messages received from the messages service are sorted in the order of our POST requests (since messages are received from the Messaging queue, they are added in the same order to the message service storage, which is a Python list).
-2. After making several GET requests, you can see that messages from the message service will be returned as different lists. This is because each copy of the messages service has its own storage, and when we do a GET request, we will get back the data from the storage of the service that was randomly selected by the facade service. The storage itself is replenished only during GET requests, and all data from the Messaging queue will be stored in the storage of the corresponding selected messages service.
+As we can see, we got a similar result to work without a Consul. But, thanks to the Consul, we no longer had to register every address, and now we can safely add new services and turn off non-working ones. In addition, in communication with the Consul, he will return us the addresses of only work services.
