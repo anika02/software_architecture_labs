@@ -1,38 +1,41 @@
 # Microservices with Messaging queue
 
 ### Architecture
-![image](https://user-images.githubusercontent.com/60771374/170826448-b43b19d2-a4ea-4986-88e8-fe61fd0fb232.png)
+![image](https://user-images.githubusercontent.com/60771374/170884165-6e4358fb-dce0-4aac-a64f-09ea714a1444.png)
+
 
 ### 10 POST requests
 Requests are in the file **POST_requests.http**
-![image](https://user-images.githubusercontent.com/60771374/170826796-8da94ed6-8a7d-4309-825b-d94b307fbd12.png)
+![image](https://user-images.githubusercontent.com/60771374/170884643-ca4ab4de-6256-4df7-bb5b-2875ba698ce3.png)
+
 
 ### Results for logging services
 ##### logging service copy 1
-![image](https://user-images.githubusercontent.com/60771374/170826857-34341727-1c74-4a36-82f0-4dd07c157490.png)
+![image](https://user-images.githubusercontent.com/60771374/170884650-90b41389-bc35-441d-b01d-be1091166ed9.png)
 
 ##### logging service copy 2
-![image](https://user-images.githubusercontent.com/60771374/170826869-488f8a1d-1f27-4702-b75d-d0d626ac9974.png)
+![image](https://user-images.githubusercontent.com/60771374/170884655-c4abae01-2dfe-498a-b985-b618b21b0a2c.png)
 
 ##### logging service copy 3
-![image](https://user-images.githubusercontent.com/60771374/170826862-7f812ee1-07ed-4ccf-a6c0-a8aa85d17946.png)
+![image](https://user-images.githubusercontent.com/60771374/170884663-f4da4e18-d3b9-497f-96c5-d41b3e28e6b0.png)
 
-### Some GET requests
+### GET request
 Request are in the file **GET_requests.http**
+
 #### GET #1
-![image](https://user-images.githubusercontent.com/60771374/170826906-cdd2146e-0e61-4fc2-bb2d-acb5f427ad4d.png)
-**messages service copy 1**
-![image](https://user-images.githubusercontent.com/60771374/170826911-edb51148-7c56-43e2-92f3-b924b0620c5e.png)
+![image](https://user-images.githubusercontent.com/60771374/170884672-fa6ea9e1-5621-4c76-b01a-07088fa5ec9f.png)
+**messages service copy 2**
+![image](https://user-images.githubusercontent.com/60771374/170884698-d0e63f6e-3133-4379-8e31-3ef6df3d80b6.png)
 
 #### GET #2
-![image](https://user-images.githubusercontent.com/60771374/170826932-841a1c18-5727-4f1b-b974-111a6baf0498.png)
+![image](https://user-images.githubusercontent.com/60771374/170884707-de827e8b-0b9c-40a4-855c-afcbf0af9eeb.png)
 **messages service copy 1**
-![image](https://user-images.githubusercontent.com/60771374/170826941-f23be480-1cbc-4aec-8a32-31f4916e16d0.png)
+![image](https://user-images.githubusercontent.com/60771374/170884712-0732fe57-8b99-4f7b-b7a4-e0db946bca94.png)
 
-#### GET #5
-![image](https://user-images.githubusercontent.com/60771374/170826963-e8919fd4-4dac-4b48-bf5b-990db8f5de72.png)
-**messages service copy 2**
-![image](https://user-images.githubusercontent.com/60771374/170826975-6a5f6ca7-6bcb-4ac2-85a7-f25293e5ef54.png)
+#### GET #3
+![image](https://user-images.githubusercontent.com/60771374/170884714-7d554ea3-c2fd-4752-842f-5ade244b3b8d.png)
+**messages service copy 1**
+![image](https://user-images.githubusercontent.com/60771374/170884720-7056ccaf-b59a-40d3-8d78-bd1ad86ed143.png)
 
 Conclusions of GET requests:
 1. Messages received from the logging service stored in the Hazelcast Distributed Map are randomly ordered. Messages received from the messages service are sorted in the order of our POST requests (since messages are received from the Messaging queue, they are added in the same order to the message service storage, which is a Python list).
